@@ -47,8 +47,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 # Reference sources
 
-[Adding TypeScript](https://create-react-app.dev/docs/adding-typescript/).
-[Install Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app).
-[Redux](https://react-redux.js.org/introduction/getting-started).
-[Loader template](https://css-loaders.com/).
-[Pagination tempale](https://flowbite.com/docs/components/pagination/).
+[Adding TypeScript](https://create-react-app.dev/docs/adding-typescript/).\
+[Install Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app).\
+[Redux](https://react-redux.js.org/introduction/getting-started).\
+[Loader template](https://css-loaders.com/).\
+[Pagination tempale](https://flowbite.com/docs/components/pagination/).\
