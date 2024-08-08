@@ -1,5 +1,3 @@
-// src/pages/HomePage.tsx
-// src/pages/HomePage.tsx
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import UserTable from "../components/UserTable";
@@ -10,15 +8,11 @@ import { loadUsers } from "../data-access/user/userSlice";
 
 const HomePage: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
-  const currentPage = useSelector(
-    (state: RootState) => state.users.currentPage
-  );
-  const totalPages = useSelector((state: RootState) => state.users.totalPages);
   const users = useSelector((state: RootState) => state.users.users);
   const loading = useSelector((state: RootState) => state.users.loading);
-  console.log(loading);
+
   const [page, setPage] = useState(1);
-  const [pageSize, setPageSiza] = useState(10);
+  const [pageSize, setPageSize] = useState(10);
 
   useEffect(() => {
     handleGetUser();
@@ -31,14 +25,26 @@ const HomePage: React.FC = () => {
     };
     dispatch(loadUsers(defaultPagination));
   };
+
   const handleClickNext = () => {
     setPage((prev) => prev + 1);
   };
+
+  const handleClickPrev = () => {
+    setPage((next) => next - 1);
+  };
+
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-2xl font-bold mb-4 text-red-500">Random Users</h1>
+      <h1 className="w-full flex justify-center items-center text-2xl font-bold m-4 text-red-500">
+        Random Users
+      </h1>
       <UserTable users={users} loading={loading}></UserTable>
-      <Pagination onClickNext={handleClickNext} />
+      <Pagination
+        page={page}
+        onClickNext={handleClickNext}
+        onClickPrev={handleClickPrev}
+      />
     </div>
   );
 };

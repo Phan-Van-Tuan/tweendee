@@ -8,7 +8,6 @@ const initialState: UsersState = {
   loading: false,
   error: null,
   currentPage: 1,
-  totalPages: 1,
 };
 
 export const loadUsers = createAsyncThunk(
@@ -27,6 +26,7 @@ const usersSlice = createSlice({
   reducers: {
     setPage: (state, action) => {
       state.currentPage = action.payload;
+      console.log(action.payload);
     },
   },
   extraReducers: (builder) => {
@@ -36,9 +36,7 @@ const usersSlice = createSlice({
     builder.addCase(loadUsers.fulfilled, (state, action) => {
       state.loading = false;
       state.users = action.payload.results;
-      console.log(state.users);
-      state.totalPages = action.payload.info.pages;
-      // state.totalPages = Math.ceil(action.payload.info.results / 10);
+      // console.log(state.users);
     });
     builder.addCase(loadUsers.rejected, (state, action) => {
       state.loading = false;

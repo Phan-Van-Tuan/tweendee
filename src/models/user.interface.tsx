@@ -22,5 +22,4 @@ export interface UsersState {
   loading: boolean;
   error: string | null;
   currentPage: number;
-  totalPages: number;
 }

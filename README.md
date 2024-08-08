@@ -44,3 +44,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Reference sources
+
+[Adding TypeScript](https://create-react-app.dev/docs/adding-typescript/).
+[Install Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app).
+[Redux](https://react-redux.js.org/introduction/getting-started).
+[Loader template](https://css-loaders.com/).
+[Pagination tempale](https://flowbite.com/docs/components/pagination/).
